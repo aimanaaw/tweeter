@@ -1,0 +1,21 @@
+.navBar {
+  padding: 1.5em;
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  z-index: 3;
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+}
+
+.logo {
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  font-size: 24px;
+ }
+ .sideLogo {
+  color: #FFFFFF;
+  font-size: 24px;
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+ }

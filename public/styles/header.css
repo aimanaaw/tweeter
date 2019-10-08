@@ -1,0 +1,22 @@
+.tweeterHeader {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+  background-color: #5c008a;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.headerAvatar {
+  position: relative;
+  top: 120px;
+  left: 50%;
+  margin-left: -128px
+}
+
+.avatarName {
+  position: relative;
+  top: 1.0em;
+  text-align: center;
+  color: #FFFFFF;
+}
