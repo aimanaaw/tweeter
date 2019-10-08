@@ -1,0 +1,31 @@
+.container {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.textBox {
+  font-family: 'Bungee', cursive;
+  font-size: 19px;
+  height: 30px;
+  width: 100%;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 4px solid black;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  font-size: 21px;
+  position: absolute;
+  right: 0%;
+  top: 25%;
+}
+
+.tweetButton {
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  font-size: 21px;
+  background-color: #4056A1;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+}
