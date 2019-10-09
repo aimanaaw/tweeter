@@ -14,9 +14,9 @@
 
 .counter {
   font-family: 'Bungee', cursive;
+  position: relative;
   font-size: 21px;
-  position: absolute;
-  right: 0%;
+  float:right;
   top: 25%;
 }
 
@@ -25,7 +25,7 @@
   color: #FFFFFF;
   font-size: 21px;
   background-color: #4056A1;
-  position: absolute;
   top: 25%;
   left: 0%;
 }
+

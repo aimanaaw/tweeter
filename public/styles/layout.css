@@ -28,10 +28,79 @@ body {
  }
  
 .container {
-  position: relative;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 2em;
   height: 500px;
   background-color: #f4f1ec;
 }
+
+.tweetHeader {
+  margin-top: 1em;
+  top: 35%;
+  height: 60%;
+  width: 100%;
+  border-style: solid;
+}
+
+.tweet {
+  top: 60%;
+  font-family: 'Bungee', cursive;
+  font-size: 17px;
+  width: 95%;
+  margin-right: 2.5%; 
+  margin-left: 2.5%;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 4px solid black;
+}
+
+.tweetIcons img {
+  height: 0.5em;
+  width: 0.5em;
+}
+
+.tweetDate {
+  font-family: 'Bungee', cursive;
+  top: 70%;
+  margin-left: 2.5%;
+  font-size: 12px;
+  color: black;
+}
+
+.tweetIcons {
+  float: right;
+  margin-right: 1.5em;
+  top: 70%;
+}
+
+.face img {
+  height: 75px;
+  width: 75px;
+  margin-top: 1.5%;
+  margin-left: 1.5%;
+}
+
+.userName {
+  position: relative;
+  top: 15%;
+  margin-left: 1%;
+  font-size: 10px;
+  font-family: 'Bungee', cursive;
+}
+
+.userID {
+  position: relative;
+  margin-top: 1.5%;
+  float: right;
+  margin-right: 1em;
+  font-size: 10px;
+  font-family: 'Bungee', cursive;
+
+}
+
+article:hover {
+  box-shadow: 5px 10px;
+}
+
