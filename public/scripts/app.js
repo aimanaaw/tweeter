@@ -84,21 +84,32 @@ $("document").ready(function() {
     event.preventDefault();
     let $form = $("form").serialize();
     let $formField = $(".textBox").val();
+    let $formFieldLength = $(".textBox").val().length;
     if ($formField === "") {
-      alert("Please enter your tweet");
-      return;
-    } else if ($formField.length > 140) {
-      alert("You have entered more than 140 character");
+      console.log("XX")
+      $("#incompleteTweet").show("slow");
       return;
     } else {
-      createATweet($form);
-      loadTweets();
+      $("#incompleteTweet").hide("slow");
     }
+    if ($formFieldLength > 140) {
+    $("#oversizedTweet").show("slow");
+    return;
+    } else {
+      $("#oversizedTweet").hide("slow");
+    }
+    if ($formFieldLength > 0 && $formFieldLength <= 140) {
+      $("#incompleteTweet").hide("slow");
+      $("#oversizedTweet").hide("slow");
+    }
+    createATweet($form);
+    loadTweets();
   })
   loadTweets();
 
   $(".arrow").click(function () {
     $("#slide").slideToggle("slow");
+    $(".textBox").focus();
   })
 
 })

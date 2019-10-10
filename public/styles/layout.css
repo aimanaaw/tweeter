@@ -103,3 +103,20 @@ body {
 article:hover {
   box-shadow: 5px 10px;
 }
+
+#incompleteTweet {
+  display: none;
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Bungee', cursive;
+}
+
+#oversizedTweet {
+  display: none;
+  border: 2px solid black;
+  color: red;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+}
