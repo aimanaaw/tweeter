@@ -39,11 +39,10 @@ module.exports = function(DataHelpers) {
         res.status(201).send();
       }
     });
-    res.redirect("/");
   });
-
+  
+  return tweetsRoutes;
   
 
-  return tweetsRoutes;
 
 }

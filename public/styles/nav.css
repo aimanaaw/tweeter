@@ -19,3 +19,31 @@
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
  }
+
+.arrow img {
+  position: absolute;
+  right: 12%;
+  bottom: 10px;
+  height: 30px;
+  width: 30px;
+  animation-name: sliding-vertically;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  color: orange;
+  cursor: grab;
+}
+
+@keyframes sliding-vertically {
+  from {
+    bottom: 10px;
+  }
+
+  25% {
+    bottom: 30px;
+  }
+
+  to {
+    bottom: 10px;
+  }
+}
+

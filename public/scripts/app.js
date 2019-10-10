@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
  const createTweetElement = function(tweet) {
    const HTMLmarkup =`
    <article class="tweetHeader">
@@ -19,7 +25,7 @@
 
               </header>
               
-                <div class="tweet" name="text" >${tweet.content.text}</div>
+                <div class="tweet" name="text" >${escape(tweet.content.text)}</div>
                 <footer>
                   <div>
                   <span class="tweetDate">${tweet.created_at}</span>
@@ -36,10 +42,9 @@
 
  const renderTweets = function(data) {
    for (let eachTweet of data) {
-
      const $tweet = createTweetElement(eachTweet);
     //  console.log($tweet);
-     $('#tweets-container').append($tweet);
+     $('#tweets-container').prepend($tweet);
    }
 
  }
@@ -47,6 +52,34 @@
 // renderTweets(data);
 
 $("document").ready(function() {
+// The POST Request
+  const createATweet = async (data) => {
+    try{
+      const response = await $.ajax( {
+        url: `/tweets`,
+        type: 'POST',
+        data
+      })
+      renderTweets(response);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    // The GET Request
+      const loadTweets = async () => {
+        try{
+          const response = await $.ajax({
+            url: `/tweets`,
+            type: 'GET',
+            dataType: 'JSON'
+          })
+          // console.log(response);
+          renderTweets(response);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+// The button click action
   $(".tweetButton").click(function(event) {
     event.preventDefault();
     let $form = $("form").serialize();
@@ -57,22 +90,15 @@ $("document").ready(function() {
     } else if ($formField.length > 140) {
       alert("You have entered more than 140 character");
       return;
+    } else {
+      createATweet($form);
+      loadTweets();
     }
-    
-    console.log($formField);
+  })
+  loadTweets();
+
+  $(".arrow").click(function () {
+    $("#slide").slideToggle("slow");
   })
 
-  const loadTweets = async () => {
-    try{
-      const response = await $.ajax({
-        url: `/tweets`,
-        type: 'GET',
-        dataType: 'JSON'
-      })
-      renderTweets(response);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  loadTweets();
 })

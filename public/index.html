@@ -32,6 +32,11 @@
     <nav class="navBar">
       <span class="logo">tweeter</span>
       <span class="sideLogo">Write a new tweet</span>
+      <div>
+              <span class="arrow">
+                <img src="/images/angle-double-down-solid.png" type="click">
+              </span>
+      </div>
     </nav>
     <header class="tweeterHeader">
         <div class="headerAvatar">
@@ -47,7 +52,7 @@
     <main class="container">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form>
+            <form id="slide">
               <textarea class="textBox" name="text" placeholder="What are you humming about?"></textarea>
               <input class="tweetButton" type="submit" value="Tweet">
               <span class="counter">140</span>
