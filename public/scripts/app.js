@@ -101,6 +101,7 @@ $("document").ready(function() {
     }
     createATweet($form);
     loadTweets();
+    $(".textBox").val('');
   })
   loadTweets();
 
