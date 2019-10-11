@@ -20,12 +20,13 @@
   font-family: 'Source Sans Pro', sans-serif;
  }
 
-.arrow img {
-  position: absolute;
-  right: 12%;
+#doubleArrow {
+  right: 10%;
   bottom: 10px;
   height: 30px;
   width: 30px;
+  font-size: 40px;
+  position: absolute;
   animation-name: sliding-vertically;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -46,4 +47,3 @@
     bottom: 10px;
   }
 }
-

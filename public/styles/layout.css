@@ -23,32 +23,44 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
  body {
   font-family: 'Source Sans Pro', sans-serif;
  }
  
 .container {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2em;
-  height: 500px;
+  padding-top: 120px;
+  align-items: center;
   background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tweetsContainer {
+  position: relative;
+  margin: auto;
+}
+
+
+#previousTweetsContainer {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 5px;
+  padding-bottom: 40px;
+  margin: auto;
 }
 
 .tweetHeader {
-  margin-top: 1em;
-  top: 35%;
-  height: 60%;
-  width: 100%;
-  border-style: solid;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 15px;
 }
 
 .tweet {
-  top: 60%;
+  display: flex;
   font-family: 'Bungee', cursive;
   font-size: 17px;
   width: 95%;
+  padding: 10px;
   margin-right: 2.5%; 
   margin-left: 2.5%;
   background-color: #f4f1ec;
@@ -56,6 +68,19 @@ body {
   border-bottom: 4px solid black;
 }
 
+article:hover {
+  box-shadow: 5px 10px;
+}
+
+article:hover .userID {
+  visibility: visible;
+}
+
+.tweetIcons {
+  float: right;
+  margin-right: 1.5em;
+  top: 70%;
+}
 .tweetIcons img {
   height: 0.5em;
   width: 0.5em;
@@ -69,15 +94,9 @@ body {
   color: black;
 }
 
-.tweetIcons {
-  float: right;
-  margin-right: 1.5em;
-  top: 70%;
-}
-
 .face img {
-  height: 75px;
-  width: 75px;
+  height: 55px;
+  width: 55px;
   margin-top: 1.5%;
   margin-left: 1.5%;
 }
@@ -91,6 +110,7 @@ body {
 }
 
 .userID {
+  visibility: hidden;
   position: relative;
   margin-top: 1.5%;
   float: right;
@@ -100,23 +120,16 @@ body {
 
 }
 
-article:hover {
-  box-shadow: 5px 10px;
-}
 
-#incompleteTweet {
-  display: none;
-  border: 2px solid red;
-  color: red;
-  text-align: center;
-  font-size: 18px;
-  font-family: 'Bungee', cursive;
-}
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
 
-#oversizedTweet {
-  display: none;
-  border: 2px solid black;
-  color: red;
-  text-align: center;
-  font-family: 'Bungee', cursive;
+  @media screen {
+    
+  }
+  
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
 }

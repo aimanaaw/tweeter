@@ -1,0 +1,3 @@
+- Group elements with a parent in order to give them layout
+- Properties: flex-direction, flex, align-items, justify-content
+- user * { border: 1px solid; } to visualize layout

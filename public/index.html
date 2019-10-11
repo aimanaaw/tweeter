@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -21,6 +22,9 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
+    <!-- Double Arrow Down -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> 
@@ -33,35 +37,35 @@
       <span class="logo">tweeter</span>
       <span class="sideLogo">Write a new tweet</span>
       <div>
-              <span class="arrow">
-                <img src="/images/angle-double-down-solid.png" type="click">
-              </span>
+          <i id = doubleArrow class="fa fa-angle-double-down" type="click"></i>
       </div>
     </nav>
-    <header class="tweeterHeader">
-        <div class="headerAvatar">
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div>
-            <h2 class="avatarName">Your Name</h2>
-        </div>
-    </header>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
-          <div id="incompleteTweet">You need to complete your Tweet</div>
-          <div id="oversizedTweet">Your Tweet has more than 140 characters</div>
-            <h2>Compose Tweet</h2>
+        <div class="headerContainer">
+          <div class="headerAvatar">
+            <img src="/images/profile-hex.png"> 
+          </div>
+          <div>
+            <p class="avatarName">Aiman Azmie</p>
+          </div>
+        </div>
+        <div class="tweetsContainer">
+          <section class="newTweetContainer">
+            <div id="incompleteTweet">You need to complete your Tweet</div>
+            <div id="oversizedTweet">Your Tweet has more than 140 characters</div>
             <form id="slide">
-              <textarea class="textBox" name="text" placeholder="What are you humming about?"></textarea>
-              <input class="tweetButton" type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
-          <section id="tweets-container">
-          </section>
+                <h2>Compose Tweet</h2>
+                <textarea class="textBox" name="text" placeholder="What are you humming about?"></textarea>
+                <input class="tweetButton" type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </form>
+            </section>
+            <section id="previousTweetsContainer">
+              
+            </section>
+        </div>
     </main>
 
   </body>

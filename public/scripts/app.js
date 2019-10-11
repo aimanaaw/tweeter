@@ -43,10 +43,8 @@ const escape =  function(str) {
  const renderTweets = function(data) {
    for (let eachTweet of data) {
      const $tweet = createTweetElement(eachTweet);
-    //  console.log($tweet);
-     $('#tweets-container').prepend($tweet);
+     $('#previousTweetsContainer').prepend($tweet);
    }
-
  }
 
 // renderTweets(data);
@@ -86,28 +84,27 @@ $("document").ready(function() {
     let $formField = $(".textBox").val();
     let $formFieldLength = $(".textBox").val().length;
     if ($formField === "") {
-      console.log("XX")
-      $("#incompleteTweet").show("slow");
+      $("#incompleteTweet").slideDown("slow");
       return;
     } else {
-      $("#incompleteTweet").hide("slow");
+      $("#incompleteTweet").slideUp("slow");
     }
     if ($formFieldLength > 140) {
-    $("#oversizedTweet").show("slow");
+    $("#oversizedTweet").slideDown("slow");
     return;
     } else {
-      $("#oversizedTweet").hide("slow");
+      $("#oversizedTweet").slideUp("slow");
     }
     if ($formFieldLength > 0 && $formFieldLength <= 140) {
-      $("#incompleteTweet").hide("slow");
-      $("#oversizedTweet").hide("slow");
+      $("#incompleteTweet").slideUp("slow");
+      $("#oversizedTweet").slideUp("slow");
     }
     createATweet($form);
     loadTweets();
   })
   loadTweets();
 
-  $(".arrow").click(function () {
+  $("#doubleArrow").click(function () {
     $("#slide").slideToggle("slow");
     $(".textBox").focus();
   })

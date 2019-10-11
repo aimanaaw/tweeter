@@ -1,5 +1,14 @@
-.container {
-  font-family: 'Source Sans Pro', sans-serif;
+#slide {
+  display: none;
+}
+
+.newTweetContainer {
+  margin: 15px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
 }
 
 .textBox {
@@ -29,3 +38,20 @@
   left: 0%;
 }
 
+
+#incompleteTweet {
+  display: none;
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Bungee', cursive;
+}
+
+#oversizedTweet {
+  display: none;
+  border: 2px solid black;
+  color: red;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+}
