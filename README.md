@@ -16,3 +16,17 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
+Screenshots:
+!["Homepage"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%201.59.55%20PM.png
+
+!["Slide down tweet composition"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%201.59.59%20PM.png
+
+!["Error message"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%202.00.07%20PM.png
+
+!["Submitting a correct tweet"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%202.00.20%20PM.png
+
+!["After submitting a tweet"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%202.00.24%20PM.png
+
+!["Submission at a smaller screensize"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%202.00.49%20PM.png
+
+!["Submitted tweets at a smaller size"]https://github.com/aimanaaw/tweeter/blob/master/public/images/Screenshots/Screen%20Shot%202019-10-11%20at%202.00.56%20PM.png
