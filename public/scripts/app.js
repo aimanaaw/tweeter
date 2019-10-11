@@ -3,13 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+// The escape function ensures a user does not enter malicious code
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
-
+// This function creates a tweet element
  const createTweetElement = function(tweet) {
    const HTMLmarkup =`
    <article class="tweetHeader">
@@ -39,7 +39,7 @@ const escape =  function(str) {
             </article>`
             return HTMLmarkup;
  }
-
+// This function called the createTweetElement for every tweet stored in the database. It loops over the data stored and generates a tweet. The tweets are pushed to the top so they are displayed from most recent to the older tweets
  const renderTweets = function(data) {
    for (let eachTweet of data) {
      const $tweet = createTweetElement(eachTweet);
@@ -47,7 +47,6 @@ const escape =  function(str) {
    }
  }
 
-// renderTweets(data);
 
 $("document").ready(function() {
 // The POST Request
@@ -77,7 +76,7 @@ $("document").ready(function() {
           console.error(error);
         }
       }
-// The button click action
+// The button click action to compose a tweet
   $(".tweetButton").click(function(event) {
     event.preventDefault();
     let $form = $("form").serialize();
@@ -102,9 +101,10 @@ $("document").ready(function() {
     createATweet($form);
     loadTweets();
     $(".textBox").val('');
+    $(".counter").text('140');
   })
   loadTweets();
-
+// The button that is responsible for displaying the tweet composition box
   $("#doubleArrow").click(function () {
     $("#slide").slideToggle("slow");
     $(".textBox").focus();
